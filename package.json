@@ -1,0 +1,36 @@
+{
+  "name": "antplus-link",
+  "version": "0.0.0",
+  "description": "Listen to ANT+ device broadcasts and publish to via a pub/sub protocol",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "test": "nyc jasmine"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.5",
+    "@types/jasmine": "^2.5.51",
+    "@types/node": "^7.0.27",
+    "jasmine": "^2.6.0",
+    "js-yaml": "^3.8.4",
+    "nyc": "^11.0.2",
+    "typescript": "^2.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:bedatse/antplus-link.git"
+  },
+  "author": "Beda Tse <beda@ananse.io>",
+  "license": "MIT",
+  "nyc": {
+    "reporter": [
+      "html",
+      "lcov"
+    ],
+    "exclude": [
+      "**/*.spec.js",
+      "spec/*.js"
+    ]
+  }
+}
