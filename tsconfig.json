@@ -11,13 +11,7 @@
     "strict": true,
     "noImplicitAny": false,
     "pretty": true,
-    "inlineSourceMap": true,
-    "types": [
-      "jest",
-      "mu2",
-      "node",
-      "uuid"
-    ]
+    "inlineSourceMap": true
   },
   "formatCodeOptions": {
     "indentSize": 2,
