@@ -5,8 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "tsc -d -p src/tsconfig.json",
-    "watch": "tsc -w -d -p src/tsconfig.json",
+    "build-dist": "yarn clean-dist && yarn build",
+    "clean-dist": "rm -rf dist",
+    "build": "tsc -d -p tsconfig.build.json",
+    "watch": "tsc -w -d -p tsconfig.build.json",
     "test": "jest --coverage --config jest.json"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/bedatse/antplus-link#readme",
   "dependencies": {
     "@google-cloud/pubsub": "^0.13.1",
+    "ant-plus": "^0.0.9",
     "config": "^1.26.1"
   },
   "devDependencies": {
@@ -28,8 +31,8 @@
     "@types/config": "^0.0.32",
     "@types/jest": "^20.0.4",
     "@types/node": "^8.0.14",
-    "js-yaml": "^3.8.4",
     "jest": "^20.0.4",
+    "js-yaml": "^3.8.4",
     "ts-jest": "^20.0.7",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
