@@ -4,18 +4,10 @@
   "description": "Listen to ANT+ device broadcasts and publish to via a pub/sub protocol",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "watch": "tsc -w -p tsconfig.json",
-    "test": "nyc jasmine"
-  },
-  "devDependencies": {
-    "@types/bluebird": "^3.5.5",
-    "@types/jasmine": "^2.5.51",
-    "@types/node": "^7.0.27",
-    "jasmine": "^2.6.0",
-    "js-yaml": "^3.8.4",
-    "nyc": "^11.0.2",
-    "typescript": "^2.3.4"
+    "start": "node dist/index.js",
+    "build": "tsc -d -p src/tsconfig.json",
+    "watch": "tsc -w -d -p src/tsconfig.json",
+    "test": "jest --coverage --config jest.json"
   },
   "repository": {
     "type": "git",
@@ -23,14 +15,23 @@
   },
   "author": "Beda Tse <beda@ananse.io>",
   "license": "MIT",
-  "nyc": {
-    "reporter": [
-      "html",
-      "lcov"
-    ],
-    "exclude": [
-      "**/*.spec.js",
-      "spec/*.js"
-    ]
+  "bugs": {
+    "url": "https://github.com/bedatse/antplus-link/issues"
+  },
+  "homepage": "https://github.com/bedatse/antplus-link#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "^0.13.1",
+    "config": "^1.26.1"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.5",
+    "@types/config": "^0.0.32",
+    "@types/jest": "^20.0.4",
+    "@types/node": "^8.0.14",
+    "js-yaml": "^3.8.4",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.7",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
   }
 }

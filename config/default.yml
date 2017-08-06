@@ -1,0 +1,6 @@
+google-credentials:
+  project-id: rtfm-dev
+  api-keys:
+    pubsub: 274b3f349f51
+pubsub-topic-prefix: hbdata
+pubsub-topic: rtfm-ananse

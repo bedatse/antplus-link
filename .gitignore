@@ -60,3 +60,4 @@ typings/
 env/*.vals.yml
 
 dist/*
+credentials/*
